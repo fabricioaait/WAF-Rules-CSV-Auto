@@ -14,8 +14,8 @@ resource "aws_waf_ipset" "ipset" {
 }
 
 resource "aws_waf_rule" "waf_rule" {
-  for_each = { for rule in local.wafrule_details : rule.name => rule }
-  name     = "rule-${each.value.name}"
+  for_each    = { for rule in local.wafrule_details : rule.name => rule }
+  name        = "rule-${each.value.name}"
   metric_name = var.waf_rule_metrics
 
   predicates {
@@ -45,6 +45,3 @@ resource "aws_waf_web_acl" "waf_acl" {
     }
   }
 }
-
-
-
