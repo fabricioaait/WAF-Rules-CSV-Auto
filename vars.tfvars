@@ -1,0 +1,7 @@
+web_acl_name = "Webacl"
+web_acl_metrics = "Webaclmetrics"
+waf_rule_name = "Wafrulename"
+waf_rule_metrics = "Wafrulemetrics"
+csv_file_path = "ips.csv"
+default_action = "ALLOW"
+rule_action = "BLOCK"
