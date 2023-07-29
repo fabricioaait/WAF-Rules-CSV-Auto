@@ -1,7 +1,7 @@
 locals {
   csv_data = file(var.csv_file_path)
   csv_ips  = csvdecode(local.csv_data)
-
+  description = "Variable needed to read from the CSV file the values like name, ip_address and etc"
   wafrule_details = [
     for wrd in local.csv_ips : {
       ipaddr      = wrd.ip_address
